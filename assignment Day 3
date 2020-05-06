@@ -1,0 +1,38 @@
+import math
+# defining the function of checking  if the number is a primary number or not
+def Primary_check(NUMBER):
+
+    if NUMBER > 1:
+        for i in range(2, NUMBER // 2):
+            if (NUMBER % i) == 0:
+                print(NUMBER, "is not a prime number")
+                break
+        else:
+            print(NUMBER, "is a prime number")
+    else:
+        print(NUMBER, "is not a prime number")
+
+
+
+while True  :
+    NUMBER= int(input ("what is your number "))
+
+    # I need to validate the input from the user to handel any wrong input
+
+
+    choice = int(input (" your choice please: 0) exit  1) factorial 2) check primary "))
+    if choice == 1  :
+        print ( " the factorial is ")
+        fact = math.factorial(NUMBER)
+        print(fact)
+
+    elif choice ==2 :
+        Primary_check(NUMBER)
+
+    elif choice == 0 :
+        print ( " Thanks for using my program مع السلامة ")
+        break
+
+    else :
+        print (" not  a valid choice bey  ")
+        break
